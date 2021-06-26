@@ -103,6 +103,7 @@
 
 .container {	
   display: grid;
+  grid-template-rows: repeat(3, auto);
   width: clamp(320px, 90vw, 80em);
 }
 
@@ -117,6 +118,8 @@
 }
 
 .logo img {
+grid-row-start: 1;
+grid-row-end:1;
 width: 12em;
 height: 12em;
 }
@@ -126,9 +129,16 @@ main img {
   height: 100%;
 }
 
-.social img {
-  width: 4em;
-  height: 4em;
+.social {
+  grid-row-start: 3;
+  grid-row-end: 4;
+display: flex;
+color: white;
+}
+
+.social svg {
+  width: 2em;
+  height: 2em;
   color: var(--text-light);
 }
 
@@ -171,6 +181,8 @@ main img {
 }
 
   .responsive {
+  grid-row-start: 2;
+  grid-row-end: 3;
   display: grid;
   max-width: 100%;
   grid-template-columns: repeat(
