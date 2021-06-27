@@ -8,13 +8,7 @@
   /* Remove default margin */
   body,
   h1,
-  h2,
-  h3,
-  h4,
   p,
-  figure,
-  blockquote,
-  dl,
   dd {
 	margin: 0;
   }
@@ -48,14 +42,6 @@
     --radius: 1em;
   }
 
-  /* Inherit fonts for inputs and buttons */
-  input,
-  button,
-  textarea,
-  select {
-	font: inherit;
-  }
-
 
   /* Set core body defaults */
   html {
@@ -71,7 +57,6 @@
 	font-size: clamp(1rem, 1.5vw,  30px) ;
 	color: var(--text-light);
 	letter-spacing: 0.25em;
-	background-image: url('./images/bg-desktop.svg');
 	display: flex;
 	flex-direction: column;
 	align-content: space-between;
@@ -79,10 +64,6 @@
 
   h1 {
 	font-size:clamp(1.5rem, 5vw,  80px);
-  }
-
-  h2 {
-	font-size:clamp(1.25rem, 3vw,  50px);
   }
 
   p {
@@ -112,9 +93,10 @@
 }
 
 .bg-image {
-/*	background-image: url('./images/bg-desktop.svg'); */
+	background-image: url('./images/bg-desktop.svg'); 
 	background-repeat: no-repeat;
 	background-size:cover;
+	background-position: 50% 70%;
 }
 
 .logo img {
@@ -173,10 +155,6 @@ display: flex;
   background-color: var(--accent);
 }
 
-  .center {
-	text-align: center;
-  }
-
   .padding {
 	padding: var(--padding);
   }
@@ -209,13 +187,6 @@ display: flex;
   minmax(10em, 1fr));
   gap: var(--gap);
   }
-
-.card {
-  display: grid;
-  padding: calc(var(--padding)*2);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
 
   /* A elements that don't have a class get default styles */
   a:not([class]) {
